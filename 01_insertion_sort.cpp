@@ -59,8 +59,10 @@ int main(void){
 
     cout << "Arreglo antes de ordenar: ";
     show_array(A,size);
+
     //Se ejecuta el ordenamiento
     insertion_sort(A,size);
+    
     cout << "Arreglo después de ordenar: ";
     show_array(A,size);
 
