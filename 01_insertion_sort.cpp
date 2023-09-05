@@ -27,7 +27,7 @@ void insertion_sort(int* A, int n){
     /* Recorrido Principal */
     //Se recorre el arreglo de izquierda a derecha a partir
     //de la segunda posición
-    for(int j = 1; j < n; j++){
+    for(int j = 1; j < n; ++j){
         //Se copia la celda actual del recorrido principal
         key = A[j];
         
