@@ -1,2 +1,5 @@
 run
-07_quicksort.cpp
+08_comparison.hpp
+08_comparison.cpp
+AVL/AVL.cpp
+AVL/run
