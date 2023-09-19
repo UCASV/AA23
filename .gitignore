@@ -1,5 +1,4 @@
 run
-08_comparison.hpp
-08_comparison.cpp
-AVL/AVL.cpp
-AVL/run
+binary_trees/AVL_naive.cpp
+binary_trees/AVL.cpp
+binary_trees/run
