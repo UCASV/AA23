@@ -50,7 +50,7 @@ void insert(tree* T, int value){
     else insert_aux(T, value);
 }
 
-void show_in_order(tree* T){
+void show_pre_order(tree* T){
     if(T == NULL){
         cout << "- ";
         return;
@@ -62,7 +62,7 @@ void show_in_order(tree* T){
     cout << "] ";
 }
 
-void show_pre_order(tree* T){
+void show_in_order(tree* T){
     if(T == NULL){
         cout << "- ";
         return;
