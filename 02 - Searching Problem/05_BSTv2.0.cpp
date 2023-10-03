@@ -134,9 +134,9 @@ void patch_removal(tree* node, tree* child){
     }
 }
 
-tree* extract_in_order_succesor(tree* T){
+tree* extract_in_order_successor(tree* T){
     if(T->left == NULL) return T;
-    else return extract_in_order_succesor(T->left);
+    else return extract_in_order_successor(T->left);
 }
 
 void remove(tree* T, int value){
@@ -168,7 +168,7 @@ void remove(tree* T, int value){
                 break;
             }
 
-            tree* IOS = extract_in_order_succesor(node->right);
+            tree* IOS = extract_in_order_successor(node->right);
             node->data = IOS->data;
             node = IOS;
         }while(true);
