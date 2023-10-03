@@ -150,19 +150,19 @@ void remove(tree* T, int value){
                 break;
             }
 
-            if(node->left == NULL){
-                patch_removal(node, node->right);
-
-                node->right->parent = node->parent;
+            if(node->right == NULL){
+                node->left->parent = node->parent;
+                
+                patch_removal(node, node->left);
 
                 free(node);
                 break;
             }
 
-            if(node->right == NULL){
-                patch_removal(node, node->left);
+            if(node->left == NULL){
+                node->right->parent = node->parent;
 
-                node->left->parent = node->parent;
+                patch_removal(node, node->right);
 
                 free(node);
                 break;
