@@ -51,7 +51,7 @@ void insert(tree* T, int value){
 }
 
 void show_pre_order(tree* T){
-    if(T == NULL){
+    if(is_empty_tree(T)){
         cout << "- ";
         return;
     }
@@ -63,7 +63,7 @@ void show_pre_order(tree* T){
 }
 
 void show_in_order(tree* T){
-    if(T == NULL){
+    if(is_empty_tree(T)){
         cout << "- ";
         return;
     }
@@ -75,7 +75,7 @@ void show_in_order(tree* T){
 }
 
 void show_post_order(tree* T){
-    if(T == NULL){
+    if(is_empty_tree(T)){
         cout << "- ";
         return;
     }
@@ -102,7 +102,7 @@ void show(tree* T, order mode){
 }
 
 bool find(tree* T, int value){
-    if(T == NULL) return false;
+    if(is_empty_tree(T)) return false;
     if(value == T->data) return true;
     if(value < T->data) return find(T->left, value);
     else return find(T->right, value);
