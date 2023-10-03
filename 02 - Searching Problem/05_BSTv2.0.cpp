@@ -57,8 +57,8 @@ void show_pre_order(tree* T){
     }
     cout << "[ ";
     cout << T->data << " ";
-    show_in_order(T->left);
-    show_in_order(T->right);
+    show_pre_order(T->left);
+    show_pre_order(T->right);
     cout << "] ";
 }
 
@@ -68,9 +68,9 @@ void show_in_order(tree* T){
         return;
     }
     cout << "[ ";
-    show_pre_order(T->left);
+    show_in_order(T->left);
     cout << T->data << " ";
-    show_pre_order(T->right);
+    show_in_order(T->right);
     cout << "] ";
 }
 
