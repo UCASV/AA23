@@ -214,7 +214,7 @@ tree* insert_aux(tree* T, int value){
             T->left = create_node(value);
             T->left->parent = T;
 
-            return T->left;;
+            return T->left;
         }else return insert_aux(T->left, value);
     else
         if(T->right == NULL){
