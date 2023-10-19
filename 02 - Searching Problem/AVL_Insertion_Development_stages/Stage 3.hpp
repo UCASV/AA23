@@ -4,8 +4,8 @@ void insertion_rebalance(tree* n){
     while(n->parent != NULL){
         parent = n->parent;
 
-        if(check_position(n) == LEFT)
-			if(parent->balance < 0){
+        if(check_position(n) == LEFT){
+			if(parent->balance == -1){
 				if(n->balance == 1) anchor = LR_rotation(parent, n);
 				else anchor = LL_rotation(parent, n);
 				break;
@@ -14,12 +14,12 @@ void insertion_rebalance(tree* n){
 				parent->balance = -1;
 				n = parent;
 			}
-			if(parent->balance > 0){
+			if(parent->balance == 1){
 				parent->balance = 0;
 				break;
 			}
-        else
-			if(parent->balance < 0){
+		}else{
+			if(parent->balance == -1){
 				parent->balance = 0;
 				break;
 			}
@@ -27,10 +27,11 @@ void insertion_rebalance(tree* n){
 				parent->balance = 1;
 				n = parent;
 			}
-			if(parent->balance > 0){
+			if(parent->balance == 1){
 				if(n->balance == -1) anchor = RL_rotation(parent, n);
 				else anchor = RR_rotation(parent, n);
 				break;
 			}
+		}
     }
 }
