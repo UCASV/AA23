@@ -74,6 +74,7 @@ void insert_aux(tree* T, int value){
         //Si hay árbol derecho, se continúa en recursión
         else insert_aux(T->right, value);
 }
+
 //Función principal para el proceso de inserción
 void insert(tree* T, int value){
     //Si el árbol está vacío, el nuevo nodo es la raíz
