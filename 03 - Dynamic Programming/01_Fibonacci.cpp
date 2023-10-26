@@ -2,14 +2,23 @@
 
 using namespace std;
 
+/*
+    Implementación con DP para obtener el n-ésimo término
+    de la Sucesión de Fibonacci.
+*/
 int fibonacci(int n){
-    int A[n+1];
+    //Se crea la estructura de datos
+    int A[n+1]; //Para Fibonacci es suficiente un arreglo
     
+    //Se colocan los casos base
     A[0] = 1;
     A[1] = 1;
-    for(int i = 2; i <= n; i++)
+
+    //Se llena el resto de la estructura
+    for(int i = 2; i <= n; ++i)
         A[i] = A[i-1] + A[i-2];
     
+    //El valor solicitado se encuentra en la última celda
     return A[n];
 }
 
